@@ -89,6 +89,8 @@ from_scratch () {
     update_test_genesis `printf '.app_state["crisis"]["constant_fee"]={"denom":"%s","amount":"1000"}' $DENOM`
     update_test_genesis '.app_state["gov"]["params"]["voting_period"]="12s"'
     update_test_genesis '.app_state["gov"]["params"]["expedited_voting_period"]="10s"'
+    update_test_genesis '.app_state["slashing"]["params"]["downtime_jail_duration"]="60s"'
+    update_test_genesis '.app_state["slashing"]["params"]["signed_blocks_window"]="10"'
 
     # === CUSTOM MODULES ===
     # globalfee
