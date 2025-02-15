@@ -105,14 +105,14 @@ from_scratch () {
     $BINARY genesis add-genesis-account $KEY 100000000$DENOM,900test --keyring-backend $KEYRING --home $HOME_DIR --append
     $BINARY genesis add-genesis-account $KEY2 100000000$DENOM,800test --keyring-backend $KEYRING --home $HOME_DIR --append
 
-    # Sign genesis transaction
-    $BINARY genesis gentx $KEY "1000000${DENOM}" --commission-rate=0.01 --commission-max-rate=0.02 --keyring-backend $KEYRING --chain-id $CHAIN_ID --home $HOME_DIR
-
-    # Collect genesis tx
-    $BINARY genesis collect-gentxs --home $HOME_DIR
-
-    # Run this to ensure everything worked and that the genesis file is setup correctly
-    $BINARY genesis validate-genesis --home $HOME_DIR
+#    # Sign genesis transaction
+#    $BINARY genesis gentx $KEY "1000000${DENOM}" --commission-rate=0.01 --commission-max-rate=0.02 --keyring-backend $KEYRING --chain-id $CHAIN_ID --home $HOME_DIR
+#
+#    # Collect genesis tx
+#    $BINARY genesis collect-gentxs --home $HOME_DIR
+#
+#    # Run this to ensure everything worked and that the genesis file is setup correctly
+#    $BINARY genesis validate-genesis --home $HOME_DIR
 
     # ICS provider genesis hack
     HACK_DIR=icshack-1 && echo $HACK_DIR
