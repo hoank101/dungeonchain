@@ -1,5 +1,6 @@
 # Built with https://github.com/rollchains/spawn
 configs/logs.json
+build/
 dist/
 
 airdrop/chains/*.json
